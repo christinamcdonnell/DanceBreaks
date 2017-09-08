@@ -1,5 +1,7 @@
 package com.christinads.DanceBreaks.controllers;
 
+import com.christinads.DanceBreaks.models.User;
+import com.christinads.DanceBreaks.models.data.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,9 +16,6 @@ import javax.validation.Valid;
 /**
  * Created by Christy on 9/4/2017.
  */
-public class UserController {
-
-
 @Controller
 @RequestMapping("user")
 public class UserController {
@@ -24,14 +23,11 @@ public class UserController {
     @Autowired
     private UsereDao userDao;
 
-    @Autowired
-    private CategoryDao categoryDao;
-
-    // Request path: /cheese
+    // Request path: /user
     @RequestMapping(value = "")
     public String index(Model model) {
 
-        model.addAttribute("cheeses", cheeseDao.findAll());
+        model.addAttribute("users", userDao.findAll());
         model.addAttribute("title", "My Cheeses");
 
         return "cheese/index";

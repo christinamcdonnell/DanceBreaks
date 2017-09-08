@@ -1,8 +1,9 @@
 package com.christinads.DanceBreaks.models;
 
-        import javax.validation.constraints.NotNull;
-        import javax.validation.constraints.Size;
-        import java.util.List;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.List;
 
 /**
  * Created by Christy on 8/21/2017.
