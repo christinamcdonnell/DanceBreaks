@@ -27,14 +27,6 @@ public class User {
     @Size(min=1, message = "Description must not be empty")
     private String description;
 
-    /*
-    @ManyToOne
-    private Category category;
-
-    @ManyToMany(mappedBy = "cheeses")
-    private List<Menu> menus;
-    */
-
     public User() { }
 
     public User(String name, String password, String description) {
@@ -55,9 +47,7 @@ public class User {
         this.name = name;
     }
 
-    public void password(String password) {
-        this.name = name;
-    }
+    public void password(String password) { this.name = name; }
 
     public String getDescription() {
         return this.description;

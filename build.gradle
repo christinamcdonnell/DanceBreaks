@@ -10,7 +10,7 @@ buildscript {
 	}
 }
 
-apply plugin: 'css'
+//apply plugin: 'css'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 

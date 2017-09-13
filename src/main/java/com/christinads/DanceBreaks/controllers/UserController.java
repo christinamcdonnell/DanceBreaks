@@ -2,6 +2,7 @@ package com.christinads.DanceBreaks.controllers;
 
 import com.christinads.DanceBreaks.models.User;
 import com.christinads.DanceBreaks.models.data.UserDao;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,9 +29,9 @@ public class UserController {
     public String index(Model model) {
 
         model.addAttribute("users", userDao.findAll());
-        model.addAttribute("title", "My Cheeses");
+        model.addAttribute("title", "DanceBreaks Homepage");
 
-        return "cheese/index";
+        return "user/index";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
