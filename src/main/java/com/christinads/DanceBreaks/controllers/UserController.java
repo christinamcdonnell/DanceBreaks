@@ -20,9 +20,8 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("user")
 public class UserController {
-
     @Autowired
-    private UsereDao userDao;
+    private UserDao userDao;
 
     // Request path: /user
     @RequestMapping(value = "")
@@ -35,16 +34,16 @@ public class UserController {
     }
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
-    public String displayAddCheeseForm(Model model) {
-        model.addAttribute("title", "Add Cheese");
-        model.addAttribute(new Cheese());
-        model.addAttribute("categories", categoryDao.findAll());
+    public String displayAddNewUserForm(Model model) {
+        model.addAttribute("title", "Add New User");
+        model.addAttribute(new User());
+        //model.addAttribute("categories", userDao.findAll());
         //model.addAttribute("cheeseTypes", CheeseType.values());
-        return "cheese/add";
+        return "user/add";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
-    public String processAddCheeseForm(@ModelAttribute @Valid Cheese newCheese,
+    public String processAddNewUserForm(@ModelAttribute @Valid User newCheese,
                                        Errors errors, @RequestParam int categoryId, Model model) {
 
         if (errors.hasErrors()) {
