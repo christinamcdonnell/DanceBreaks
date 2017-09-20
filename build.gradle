@@ -11,10 +11,15 @@ buildscript {
 }
 
 //apply plugin: 'css'
+apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
+
 version = '0.0.1-SNAPSHOT'
+
+
+
 sourceCompatibility = 1.8
 
 repositories {
@@ -30,3 +35,5 @@ dependencies {
 	runtime('org.springframework.boot:spring-boot-devtools')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+logging.level = LogLevel.DEBUG

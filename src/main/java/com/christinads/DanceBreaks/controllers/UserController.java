@@ -32,7 +32,7 @@ public class UserController {
 
         return "user/index";
     }
-
+/*
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String displayAddNewUserForm(Model model) {
         model.addAttribute("title", "Add New User");
@@ -43,8 +43,8 @@ public class UserController {
     }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
-    public String processAddNewUserForm(@ModelAttribute @Valid User newCheese,
-                                       Errors errors, @RequestParam int categoryId, Model model) {
+    public String processAddNewUserForm(@ModelAttribute @Valid User newUser,
+                                       Errors errors, @RequestParam int userId, Model model) {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Cheese");
@@ -76,5 +76,5 @@ public class UserController {
 
         return "redirect:";
     }
-
+*/
 }
