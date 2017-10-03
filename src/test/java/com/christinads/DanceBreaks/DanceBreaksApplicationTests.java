@@ -1,4 +1,4 @@
-package com.christinads.DanceBreaks;
+/*package com.christinads.DanceBreaks;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,3 +14,4 @@ public class DanceBreaksApplicationTests {
 	}
 
 }
+*/

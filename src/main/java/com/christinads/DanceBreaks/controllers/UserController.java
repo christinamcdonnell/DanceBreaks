@@ -1,6 +1,6 @@
 package com.christinads.DanceBreaks.controllers;
 
-import com.christinads.DanceBreaks.models.User;
+//import com.christinads.DanceBreaks.models.User;
 import com.christinads.DanceBreaks.models.data.UserDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
