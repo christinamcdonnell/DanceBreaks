@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * Created by Christy on 8/21/2017.
  */
+@Entity
 public class User {
 
 
