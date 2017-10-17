@@ -1,7 +1,22 @@
+header {
+    font-family: Ariel, Helvetica;font-size: 22px;
+    <!-- font-family: "Times New Roman", Times, serif;  -->
+    <!--
+    <link href='https://fonts.googleapis.com/css?family=Euphoria Script' rel='stylesheet'>
+    <style>
+    body {
+        font-family: 'Euphoria Script';font-size: 22px;
+    }
+    </style>
+    -->
+}
+
 body {
     font-family: sans-serif;
+    background-color: #e4e4e4;
 }
 
 nav {
     margin-bottom: 20px;
+     background-color: #e4e4e4;
 }

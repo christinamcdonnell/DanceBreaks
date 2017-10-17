@@ -30,8 +30,7 @@ public class UserController {
         model.addAttribute("users", userDao.findAll());
         model.addAttribute("title", "DanceBreaks Homepage");
         int i = 2;
-        i = 1;
-        System.out.println("CDS line" + Integer.toString(i));
+       System.out.println("CDS line" + Integer.toString(i));
 
         return "user/index";
     }
