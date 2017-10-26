@@ -32,9 +32,21 @@ public class UserController {
         int i = 2;
        System.out.println("CDS line" + Integer.toString(i));
 
-        return "user/index";
+        return "user/index"; /* tells the html file to "go" to */
     }
-/*
+
+    @RequestMapping(value = "about", method = RequestMethod.GET)
+    public String displayAboutForm(Model model) {
+        model.addAttribute("title", "Dance Breaks - What's that?");
+        return "user/about";
+    }
+
+    @RequestMapping(value = "about", method = RequestMethod.POST)
+    public String processAboutForm(Model model) {
+
+        return "redirect:";
+    }
+/******************************************************************************
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String displayAddNewUserForm(Model model) {
         model.addAttribute("title", "Add New User");

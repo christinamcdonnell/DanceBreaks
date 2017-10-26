@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+<br/>
+<p>  COMING SOON !   Everything you want to know about Dance Breaks and CLOSE Button</p>
+
+<form method="post" style="max-width:600px;">
+    <p>
+       Dance Breaks is your video link storage, photo archive, dance blog, find a dance partner....blah blah!
+    </p>
+
+
+    <input type="submit" value="CLOSE" />
+</form>
+
+<nav th:replace="fragments :: navigationBottom"></nav>
+
+</body>
+</html>
