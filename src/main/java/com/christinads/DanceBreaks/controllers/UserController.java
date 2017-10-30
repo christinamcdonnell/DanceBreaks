@@ -46,6 +46,39 @@ public class UserController {
 
         return "redirect:";
     }
+
+
+    @RequestMapping(value = "login", method = RequestMethod.GET)
+    public String displayLoginForm(Model model) {
+        model.addAttribute("title", "Dance Breaks Login");
+        return "user/login";
+    }
+
+    @RequestMapping(value = "login", method = RequestMethod.POST)
+    public String processLoginForm(Model model) {
+        /* GET USER LOGIN AND PW */
+
+        /* VERIFY login INFO  IF NO ERRORS SEND TO THE USERS PERSONAL PAGE */
+
+        return "redirect:";
+    }
+
+//
+//    @RequestMapping(value = "logout", method = RequestMethod.GET)
+ //   public String displayLogoutForm(Model model) {
+//        model.addAttribute("title", "Dance Breaks LOGOUT");
+ //       return "user/logout";
+ //   }
+//
+ //   @RequestMapping(value = "logout", method = RequestMethod.POST)
+ //   public String processLogoutForm(Model model) {
+ //       /* DO SOMETHING HERE TO LOGOUT THE USER AND SEND THEM BACK TO THE HOMEPAGE */
+ //       return "redirect:";
+ //   }
+//
+
+
+
 /******************************************************************************
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String displayAddNewUserForm(Model model) {
