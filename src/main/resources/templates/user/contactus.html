@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
 </head>
-<body>
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+<br/>
+<p>  COMING SOON !   Dance Breaks CONTACT US</p>
+
+<form method="post" style="max-width:600px;">
+    <p>
+        Dance Breaks CONTACT US INFO will go here!Display Telephone number, email,
+        provide message box with submit/send button
+
+    </p>
+
+
+    <input type="submit" value="CLOSE CONTACT PAGE" />
+</form>
+
+<nav th:replace="fragments :: navigationBottom"></nav>
 
 </body>
 </html>

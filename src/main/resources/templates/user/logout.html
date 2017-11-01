@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
 </head>
-<body>
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+<br/>
+<p>  COMING SOON !   Dance Breaks User LOGOUT</p>
+
+<form method="post" style="max-width:600px;">
+    <p>
+        Dance Breaks USER LOGOUT will go here!
+    </p>
+
+
+    <input type="submit" value="LOGOUT" />
+</form>
+
+<nav th:replace="fragments :: navigationBottom"></nav>
 
 </body>
 </html>
-
-
-

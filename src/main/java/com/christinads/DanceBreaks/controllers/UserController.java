@@ -63,20 +63,30 @@ public class UserController {
         return "redirect:";
     }
 
-//
-//    @RequestMapping(value = "logout", method = RequestMethod.GET)
- //   public String displayLogoutForm(Model model) {
-//        model.addAttribute("title", "Dance Breaks LOGOUT");
- //       return "user/logout";
- //   }
-//
- //   @RequestMapping(value = "logout", method = RequestMethod.POST)
- //   public String processLogoutForm(Model model) {
- //       /* DO SOMETHING HERE TO LOGOUT THE USER AND SEND THEM BACK TO THE HOMEPAGE */
- //       return "redirect:";
- //   }
-//
+    @RequestMapping(value = "logout", method = RequestMethod.GET)
+    public String displayLogoutForm(Model model) {
+        model.addAttribute("title", "Dance Breaks LOGOUT");
+        return "user/logout";
+    }
 
+    @RequestMapping(value = "logout", method = RequestMethod.POST)
+    public String processLogoutForm(Model model) {
+        /* DO SOMETHING HERE TO LOGOUT THE USER AND SEND THEM BACK TO THE HOMEPAGE */
+        return "redirect:";
+    }
+
+
+    @RequestMapping(value = "contactus", method = RequestMethod.GET)
+    public String displayContactUsForm(Model model) {
+        model.addAttribute("title", "Dance Breaks CONTACT US");
+        return "user/contactus";
+    }
+
+    @RequestMapping(value = "contactust", method = RequestMethod.POST)
+    public String processContactUsForm(Model model) {
+        /* DO SOMETHING HERE TO LOGOUT THE USER AND SEND THEM BACK TO THE HOMEPAGE */
+        return "redirect:";
+    }
 
 
 /******************************************************************************
