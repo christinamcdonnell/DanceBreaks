@@ -1,6 +1,7 @@
 package com.christinads.DanceBreaks.controllers;
 
 //import com.christinads.DanceBreaks.models.User;
+import com.christinads.DanceBreaks.models.User;
 import com.christinads.DanceBreaks.models.data.UserDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,6 +52,7 @@ public class UserController {
     @RequestMapping(value = "login", method = RequestMethod.GET)
     public String displayLoginForm(Model model) {
         model.addAttribute("title", "Dance Breaks Login");
+        model.addAttribute(new User());
         return "user/login";
     }
 
