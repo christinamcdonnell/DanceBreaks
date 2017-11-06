@@ -8,13 +8,17 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 <br/>
-<p>  COMING SOON !   Dance Breaks User Login</p>
+<p>  COMING SOON !   Dance Breaks User LOGIN</p>
 
-<form method="post" style="max-width:600px;">
+<form method="post" style="max-width:600px;"  th:object="${user}">
+    <p>
+        Dance Breaks USER LOGIN will go here! Goodbye!
+    </p>
 
-    <div>
-        <p>Dance Breaks USER LOGIN will go here!</p>
-        <p></p>
+    <div class="form-group">
+        <label th:for="name">Name</label>
+        <input class="form-control" th:field="*{name}" />
+        <span th:errors="*{name}" class="error"></span>
     </div>
 
 
@@ -25,32 +29,3 @@
 
 </body>
 </html>
-
-
-<!--
-<form method="post" style="max-width:600px;" th:object="${cheese}">
-    <div class="form-group">
-        <label th:for="name">Name</label>
-        <input class="form-control" th:field="*{name}" />
-        <span th:errors="*{name}" class="error"></span>
-    </div>
-    <div class="form-group">
-        <label th:for="description">Description</label>
-        <input class="form-control" th:field="*{description}" />
-        <span th:errors="*{description}" class="error"></span>
-    </div>
-
-    <div class="form-group">
-        <label th:for="type">Type</label> <!-- Should this be changed as we are deleting CheeseType???  - ->
-        <select name="categoryId">
-            <option th:each="category : ${categories}"
-                    th:text="${category.name}"
-                    th:value="${category.id}">
-            </option>
-        </select>
-    </div>
-
-    <input type="submit" value="Add Cheese" />
-</form>
-
--->
