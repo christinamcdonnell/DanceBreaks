@@ -47,8 +47,8 @@ public class User {
         this.name = name;
     }
 
-    private String getPassword(){return this.password}
-    
+    private String getPassword(){return this.password;}
+
     public void setPassword(String password) { this.password = password; }
 
     public String getDescription() {
