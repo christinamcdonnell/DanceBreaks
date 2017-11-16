@@ -11,7 +11,6 @@ import java.util.List;
 @Entity
 public class User {
 
-
     @Id
     @GeneratedValue
     private int id;
@@ -48,7 +47,9 @@ public class User {
         this.name = name;
     }
 
-    public void password(String password) { this.name = name; }
+    private String getPassword(){return this.password}
+    
+    public void setPassword(String password) { this.password = password; }
 
     public String getDescription() {
         return this.description;
