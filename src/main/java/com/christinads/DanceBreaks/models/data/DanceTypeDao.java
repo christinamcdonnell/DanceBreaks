@@ -1,7 +1,5 @@
 package com.christinads.DanceBreaks.models.data;
 
-import com.christinads.DanceBreaks.models.DanceType;
-import com.christinads.DanceBreaks.models.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
