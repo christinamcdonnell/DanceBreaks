@@ -3,6 +3,8 @@ package com.christinads.DanceBreaks.models;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -17,36 +19,69 @@ public class DanceRole {
 
     @NotNull
     @Size(min=8, max=50)
-    private String name;
+    private String dancername;
 
     @NotNull
-    @Size(min=8, max=15, message = "Password must not be empty")
-    private String nickname;
+    private int dancetype_id;
 
-    public DanceType() { }
+    @NotNull
+    private String role;
 
-    public DanceType(String name, String nickname) {
-        this.name = name;
-        this.nickname = nickname;
+    @NotNull
+    private String competition_level;;
+
+    @NotNull
+    private String practice_level;
+
+    public DanceRole() { }
+
+    public DanceRole(String dancername, int dancetype_id, String role, String competition_level, String practice_level) {
+        this.dancername = dancername;
+        this.dancetype_id = dancetype_id;
+        this.role = role;
+        this.competition_level = competition_level;
+        this.practice_level = practice_level;
     }
 
     public int getId() {
         return this.id;
     }
 
-    public String getName() {
-        return this.name;
+    public String getDancername() {
+        return this.dancername;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDancername(String dancername) {
+        this.dancername = dancername;
     }
 
-    public String getNickname(){ return this.nickname; }
+    public int getDancetype_id(){ return this.dancetype_id; }
 
-    public void setNickname(String nickname) { this.nickname = nickname; }
+    public void setDancetype_id(int dancetype_id) { this.dancetype_id = dancetype_id; }
+
+    public enum DancerRole {LEAD, FOLLOW); //********************check this DOES THIS NEED TO BE IT'S OWN CLASS?
+
+    public String getRole() { return this.role; }
+
+    public void setRole(DancerRole role) { this.role = role; }
+
+
+    public enum Level {NEWCOMER, NOVICE, INTERMEDIATE, ADVANCED, ALLSTAR, CHAMPION);   //********************check this DOES THIS NEED TO BE IT'S OWN CLASS?
+
+    public String getCompetition_level() {
+        return this.competition_level;
+    }
+
+    public void setCompetition_level(Level competition_level) {
+        this.competition_level = competition_level;
+    }
+
+    public String getPractice_level() {
+        return this.practice_level;
+    }
+
+    public void setPractice_level(Level practice_level) {
+        this.practice_level = practice_level;
+    }
 
 }
-
-        import javax.persistence.*;
-        import java.util.List;
